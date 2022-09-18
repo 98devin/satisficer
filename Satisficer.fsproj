@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <PublishAot>true</PublishAot>
+    <PublishSingleFile>true</PublishSingleFile>
+    <PublishReadyToRun>true</PublishReadyToRun>
+    <PublishTrimmed>true</PublishTrimmed>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Core.fs" />
+    <Compile Include="Optimization.fs" />
+    <Compile Include="Ingest.fs" />
+    <Compile Include="Program.fs" />
+    <EmbeddedResource Include="Docs.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FSharp.Data" Version="5.0.2" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="6.0.8" />
+  </ItemGroup>
+</Project>
